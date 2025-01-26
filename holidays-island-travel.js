@@ -32,17 +32,17 @@ const header = document.getElementById('mughader_header');
 let lastScrollPosition = 0;
 
 window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.scrollY;
+    const currentScrollPosition = window.scrollY;
 
-  if (currentScrollPosition > lastScrollPosition) {
-    // Scrolling down
-    header.classList.add('hidden');
-  } else {
-    // Scrolling up
-    header.classList.remove('hidden');
-  }
+    if (currentScrollPosition > lastScrollPosition) {
+        // Scrolling down
+        header.classList.add('hidden');
+    } else {
+        // Scrolling up
+        header.classList.remove('hidden');
+    }
 
-  lastScrollPosition = currentScrollPosition;
+    lastScrollPosition = currentScrollPosition;
 });
 
 
@@ -56,23 +56,20 @@ window.addEventListener('scroll', () => {
 /* Switching words functionality */
 document.addEventListener("DOMContentLoaded", function () {
     const words = [
-        "إندونيسيا",
-        "تايلاند",
+        "رحلات سياحية",
         "المالديف",
-        "موريشيوس",
-        "عروض سياحية",
-        "جورجيا",
-        "تركيا",
-        "اذربيجان",
         "البوسنة",
-        "سيريلانكا",
+        "تايلاند",
         "ماليزيا",
-        "دبي",
-        "مصر",
-        "الجبل الأسود",
-        "ياس ايلاند",
-        "اسطنبول",
-        "الدوحة",
+        "جورجيا",
+        "اندونيسيا",
+        "تركيا",
+        "لندن",
+        "اذربيجان",
+        "اليونان",
+        "موريشوس",
+        "هايدواي",
+        "عروض سياحية",
     ];
 
     let currentIndex = 1;
@@ -356,15 +353,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // create all offers content functionality
 const sectionData = [
     {
-        title: 'عروض تايلاند',
-        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-تايلاند/عرض-تايلاند-1.jpg', 'تايلاند - عرض الصيف الفاخر'],
-    },
-
-    {
         title: 'عروض المالديف',
         image_1: ['عروض-شركة-جزيرة-العطلات/عروض-المالديف/عرض-المالديف-1.jpg', 'منتجع برينيا المالديف'],
         image_2: ['عروض-شركة-جزيرة-العطلات/عروض-المالديف/عرض-المالديف-2.jpg', 'منتجع نوكو المالديف'],
         image_3: ['عروض-شركة-جزيرة-العطلات/عروض-المالديف/عرض-المالديف-3.jpg', 'منتجع هايدواي المالديف'],
+    },
+
+    {
+        title: 'عروض البوسنة',
+        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-البوسنة/عرض-البوسنة-1.jpg', 'عرض البوسنة - سراييفو & جبال الألب البوسنية'],
+    },
+
+    {
+        title: 'عروض تايلاند',
+        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-تايلاند/عرض-تايلاند-1.jpg', 'عرض تايلاند - عرض الصيف الفاخر'],
     },
 
     {
@@ -379,7 +381,7 @@ const sectionData = [
 
     {
         title: 'عروض اندونيسيا',
-        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-اندونيسيا/عرض-اندونيسيا-1.jpg', 'إندونيسيا - بكج خمس نجوم'],
+        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-اندونيسيا/عرض-اندونيسيا-1.jpg', 'عرض إندونيسيا - بكج خمس نجوم'],
     },
 
     {
@@ -389,7 +391,8 @@ const sectionData = [
 
     {
         title: 'عروض لندن',
-        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-لندن/عرض-لندن-1.jpg', 'لندن - سبعة ليالي'],
+        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-لندن/عرض-لندن-1.jpg', 'عرض لندن - سبعة ليالي'],
+        image_2: ['عروض-شركة-جزيرة-العطلات/عروض-لندن/عرض-لندن-2.jpg', 'عرض لندن - سبعة ليالي'],
     },
 
     {
@@ -399,7 +402,7 @@ const sectionData = [
 
     {
         title: 'عروض اليونان',
-        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-اليونان/عرض-اليونان-1.jpg', 'اليونان - ميكونوس & سانتوريني'],
+        image_1: ['عروض-شركة-جزيرة-العطلات/عروض-اليونان/عرض-اليونان-1.jpg', 'عرض اليونان - ميكونوس & سانتوريني'],
     },
 
     {
@@ -503,7 +506,7 @@ function openFullScreenImage(src, text) {
         fullScreenDiv.classList.remove('visible'); // Trigger fade-out
         setTimeout(() => fullScreenDiv.remove(), 300); // Remove element after fade-out
 
-        
+
         document.body.style.overflow = ''; // Re-enable document scrolling
     }
 }
